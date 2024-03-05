@@ -14,7 +14,11 @@ namespace StocktrackService.Services
         [OperationContract]
         Store GetStoreById(int id);
         [OperationContract]
+        Store GetStoreByEmail(string email);
+        [OperationContract]
         Store AddStore(Store store);
+        [OperationContract]
+        Response Verify(string email,string password);
         [OperationContract]
         Store UpdateStore(Store store);
         [OperationContract]

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="StoreService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/StocktrackService.models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IStoreService_GetStoreById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreById" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_GetStoreById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_GetStoreByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_GetStoreByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_AddStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStore" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_AddStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_Verify_InputMessage">
+    <wsdl:part name="parameters" element="tns:Verify" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_Verify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_UpdateStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStore" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_UpdateStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_DeleteStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStore" />
+  </wsdl:message>
+  <wsdl:message name="IStoreService_DeleteStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStoreResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IStoreService">
+    <wsdl:operation name="GetStoreById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/GetStoreById" message="tns:IStoreService_GetStoreById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/GetStoreByIdResponse" message="tns:IStoreService_GetStoreById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/GetStoreByEmail" message="tns:IStoreService_GetStoreByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/GetStoreByEmailResponse" message="tns:IStoreService_GetStoreByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/AddStore" message="tns:IStoreService_AddStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/AddStoreResponse" message="tns:IStoreService_AddStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Verify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/Verify" message="tns:IStoreService_Verify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/VerifyResponse" message="tns:IStoreService_Verify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/UpdateStore" message="tns:IStoreService_UpdateStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/UpdateStoreResponse" message="tns:IStoreService_UpdateStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/DeleteStore" message="tns:IStoreService_DeleteStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/DeleteStoreResponse" message="tns:IStoreService_DeleteStore_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IStoreService" type="tns:IStoreService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStoreById">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/GetStoreById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreByEmail">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/GetStoreByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStore">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/AddStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verify">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/Verify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStore">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/UpdateStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStore">
+      <soap:operation soapAction="http://tempuri.org/IStoreService/DeleteStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StoreService">
+    <wsdl:port name="BasicHttpBinding_IStoreService" binding="tns:BasicHttpBinding_IStoreService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/StocktrackService/StoreService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -14,7 +14,7 @@ namespace StocktrackService.Services
         [OperationContract]
         IEnumerable<Product> GetProducts(int storeId);
         [OperationContract]
-        Product GetProductById(int productId,int storeId);
+        Product GetProductById(int productId);
         [OperationContract]
         IEnumerable<Product> SearchProduct(string query, int storeId);
         [OperationContract]
