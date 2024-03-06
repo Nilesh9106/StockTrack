@@ -46,7 +46,7 @@
                                 <li class="list-group-item">Date : <%#Eval("added") %></li>
                             </ul>
                             <div class="card-body d-flex gap-2">
-                                <asp:Button CssClass="btn btn-danger" runat="server" ID="btnDelete" Text="Delete" OnClick="btnDelete_Click" />
+                                <asp:Button CssClass="btn btn-danger" runat="server" ID="btnDelete" Text="Delete" OnClientClick="return confirm('are you sure to delete this transaction??')" OnClick="btnDelete_Click" />
                             </div>
                         </div>
                     </div>

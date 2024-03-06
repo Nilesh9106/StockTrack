@@ -18,7 +18,7 @@
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Price" type="xs:int" />
       <xs:element minOccurs="0" name="Qty" type="xs:int" />
       <xs:element minOccurs="0" name="Store" nillable="true" type="tns:Store" />
     </xs:sequence>

@@ -163,7 +163,7 @@ namespace StockTrackClient.TransactionService {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PriceField;
+        private int PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int QtyField;
@@ -247,7 +247,7 @@ namespace StockTrackClient.TransactionService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Price {
+        public int Price {
             get {
                 return this.PriceField;
             }

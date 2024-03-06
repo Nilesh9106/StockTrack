@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -16,7 +17,9 @@ namespace StocktrackService.models
         public int Qty { get; set; }
         [DataMember]
         public string Type { get; set; }
-        [DataMember] 
+        [DataMember]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         DateTime added { get; set; }
         [DataMember]
         public Store Store { get; set; }

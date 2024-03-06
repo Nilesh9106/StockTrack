@@ -13,7 +13,7 @@ namespace StocktrackService.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202402230538287_initial"; }
+            get { return "202403060909137_initial"; }
         }
         
         string IMigrationMetadata.Source

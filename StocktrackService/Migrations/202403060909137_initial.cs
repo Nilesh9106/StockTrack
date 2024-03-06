@@ -14,7 +14,7 @@
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                         Description = c.String(),
-                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Price = c.Int(nullable: false),
                         Qty = c.Int(nullable: false),
                         Category = c.String(),
                         Brand = c.String(),

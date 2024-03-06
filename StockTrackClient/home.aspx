@@ -32,7 +32,7 @@
                             <div class="card-body d-flex gap-2">
                                 <a href="/Products/edit.aspx?Id=<%#Eval("Id") %>" class="btn btn-dark">Edit</a>
                                 <a href="/Transactions/view.aspx?ProductId=<%#Eval("Id") %>" class="btn btn-dark">Transactions</a>
-                                <asp:Button CssClass="btn btn-danger" runat="server" ID="btnDelete" Text="Delete" OnClick="btnDelete_Click" />
+                                <asp:Button CssClass="btn btn-danger" runat="server" ID="btnDelete" Text="Delete" OnClick="btnDelete_Click" OnClientClick="return confirm('are you to delete Product??')"  />
                             </div>
                         </div>
                     </div>
