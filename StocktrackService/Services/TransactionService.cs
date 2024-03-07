@@ -27,6 +27,8 @@ namespace StocktrackService.Services
             {
                 p.Qty += transaction.Qty;
             }
+            transaction.added= DateTime.Now;
+
             transaction.Product = p;
             transaction.Store = db.Stores.Find(storeId);
             transaction = db.Transactions.Add(transaction);

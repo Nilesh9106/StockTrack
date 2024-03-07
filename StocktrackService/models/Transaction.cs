@@ -17,10 +17,11 @@ namespace StocktrackService.models
         public int Qty { get; set; }
         [DataMember]
         public string Type { get; set; }
+
         [DataMember]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        DateTime added { get; set; }
+        public DateTime added { get; set; }
         [DataMember]
         public Store Store { get; set; }
         [DataMember]
