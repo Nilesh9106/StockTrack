@@ -19,9 +19,6 @@ StockTrack is an Inventory Management System designed to help stores efficiently
 # Add EF Core tools if not already installed
 Install-Package Microsoft.EntityFrameworkCore.Tools
 
-# Create a migration
-Add-Migration InitialCreate
-
 # Update the database with the migration
 Update-Database
 ```
